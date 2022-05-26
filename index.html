@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookmarks App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body onload="fetchBookmarks()">
+    <div class="container my-5">  
+      <h1>Site Bookmarks</h1>
+      <form id="myform">
+        <div class="mb-3">
+          <label for="text" class="form-label">Site Name</label>
+          <input
+            placeholder="Site Name"
+            type="text"
+            class="form-control"
+            id="siteName"
+            aria-describedby="text"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="url" class="form-label">Site URL</label>
+          <input
+            type="url"
+            placeholder="Site url"
+            class="form-control"
+            id="siteUrl"
+          />
+        </div>
+        <button type="submit" onclick="clearForm()" class="btn btn-primary">Submit</button>
+      </form>
+      <div id="bookmarksResults"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
